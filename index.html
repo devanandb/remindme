@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>RemindMe | Home</title>
+	<link rel="stylesheet" href="assets/css/style.css">
+	<script type="text/javascript" src="assets/js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" ng:autobind src="http://code.angularjs.org/0.9.18/angular-0.9.18.js"></script>
+	<script src="assets/js/main.js"></script>
+</head>
+<body>
+	<div class="phone-chrome">
+		<div class="container">
+			<div class="header">
+				<div class="logo">
+					<a href="index.html">Remind Me...</a>
+				</div>
+			</div>
+			<div class="maincontent">
+				<div ng:controller="TodoCtrl">
+				
+				    <div class="add-todo">
+				     	<input type="text" name="todoText" placeholder="enter your todo here"/>
+				     	<a class="add-icon" ng:click="addTodo()">+</a>
+				    </div>
+				    <div ng:repeat="todo in todos" class="li-items">
+				    	<div class="border-it"></div>
+				    	<div ng:click="moreDet()" class="li-item" ng:class="'done_' + todo.done">
+				    		<input type="checkbox" name="todo.done" ng:click="recalc()">
+				    		<div class="item-label">{{todo.text}}</div><div class="item-time">{{todo.time}}</div>
+				    	</div>
+				    </div>
+				    <!-- <ul ng:repeat="todo in todos">
+				        <li>
+				            <input type="checkbox" name="todo.done" ng:click="recalc()">
+				            updates the css class to done_true or done_false
+				            <span ng:class="'done_' + todo.done">{{todo.text}}</span><br/>
+				        </li>
+				    </ul> -->
+				    <!-- <label>{{remaining}} remaining</label>
+				    						    	<button ng:click="removeDone()">remove done</button> -->
+				</div>
+			</div>
+			<div class="footer">
+				<a href="index.html" id="today">Today</a> <a id="tmrw">Tomorrow</a> <a id="later">Later</a> <a id="settings">Settings</a>
+			</div>
+			    
+
+			
+		</div>
+	</div>
+	<script>
+	    $(document).ready(function(){
+	    	$("#tmrw").click(function(){
+	    		$(".maincontent").load("tmrw.html");
+	    	});
+	    	/*$("#today").click(function(){
+	    		$(".maincontent").load("index.html");
+	    	});*/
+	    	$("#later").click(function(){
+	    		$(".maincontent").load("later.html");
+	    	});
+	    	$("#settings").click(function(){
+	    		$(".maincontent").load("settings.html");
+	    	});
+	    });
+	</script>
+</body>
+</html>

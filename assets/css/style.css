@@ -1,0 +1,120 @@
+@font-face {
+    font-family: 'futura-l';
+    src: url('fonts/FuturLig_OT.otf');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'futura-b';
+    src: url('fonts/FuturMed_OT.otf');
+    /* font-weight: normal; */
+    font-style: normal;
+
+}
+body {
+	font-family: "futura-l", "Arial";
+	margin: 0px;
+	padding:0px;
+	margin: auto;
+}
+.phone-chrome {
+	margin: auto;
+	margin-top: 20px;
+	background-image: url("../img/phone_chrome.png");
+	background-repeat: no-repeat;
+	width: 380px;
+	height: 760px;
+}
+.container {
+	/* background-color: #dddddd; */
+	margin: 107px 0px 0px 32px;
+	position: absolute;
+	height: 533px;
+	width: 321px;
+}
+.header {
+	border-bottom: 2px solid #a51616;
+	padding:8px;
+}
+.logo {
+	font-size: 20px;
+	font-weight: bold;
+}
+.logo a {
+	font-family: 'futura-b';
+	text-transform: uppercase;
+	color: #c73434;
+	text-decoration: none;
+}
+.logo a:hover {
+	color: #a51616;
+}
+.li-items {
+
+}
+.li-item {
+	padding:20px 6px;
+	border-left: 6px solid #cf1717;
+	font-size: 22px;
+	cursor: pointer;
+
+}
+.li-item:hover {
+	background-color: #eeeeee;
+}
+.done_true {
+	border-left: 6px solid #12c000;
+}
+.item-label {
+	display: inline-block;
+}
+.item-time {
+	float: right;
+	font-size: 14px;
+	color: #999;
+	margin-top: 7px;
+}
+.border-it {
+	border-top: 1px solid #dddddd;
+	padding-bottom: 3px;
+	margin-top: 3px;
+}
+.add-todo {
+	padding:5px;
+	margin:5px 0px;
+}
+.add-todo input {
+	font-family: "futura-l", "Arial";
+	padding:8px;
+	font-size: 18px;
+	border-radius: 4px;
+	width: 243px;
+}
+.add-icon {
+	padding: 2px 12px 7px 12px;
+	border:1px solid #2170ad;
+	color: #ffffff;
+	background-color: #177fcf;
+	font-weight: bold;
+	font-size: 24px;
+	text-decoration: none;
+}
+.add-icon:hover {
+	border: 1px solid #ffffff;
+}
+.footer {
+	position: absolute;
+	bottom: 0;
+	background-color: #eeeeee;
+	width: 313px;
+	padding:4px;
+
+}
+.footer a {
+	text-decoration: none;
+	padding:2px 12px;
+}
+.footer a:hover {
+	font-weight: bold;
+}
